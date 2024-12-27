@@ -38,7 +38,7 @@ app.use(isAuthenticated) ;// isAuthenticated // yeh middleware chek krta hai h u
 
 app.get("/",Auth,async(req,res,next)=> {
     let userId = req.userInfo.userId
-    res.render("home.ejs",{title:"Zyn.Home",stylepath:'/css/home.css',userId})
+    res.render("Home.ejs",{title:"Zyn.Home",stylepath:'/css/home.css',userId})
 })
 app.use('/home',homeRouter);
 app.use("/search",searchRouter);
