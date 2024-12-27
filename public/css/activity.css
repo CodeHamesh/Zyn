@@ -1,0 +1,86 @@
+.notifi{
+   width: 100%;
+   height: fit-content;
+   padding: 0.5rem 1rem;
+}
+.notifi h3{
+    font-size: 1.1rem;
+}
+.reqs{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.reqdiv{
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.imgandusernameandmsg{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.imgdivforreq img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.usernameforreq{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.usernameforreq h4{
+  font-size: 0.7rem;
+}
+.usernameforreq p{
+    font-size: 0.8rem;
+}
+.imgdivforreq{
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.acceptanddeletebtns{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.acceptanddeletebtns button{
+    cursor: pointer;
+}
+.acceptanddeletebtns form:nth-child(1) button{
+    background-color: #1877F2;
+    color: #fff;
+    border-radius: 0.2rem;
+    border: none;
+    outline: none;
+    padding: 0.2rem 0.5rem;
+}
+.acceptanddeletebtns form:nth-child(2) button{
+    background-color: #262626;
+    color: #fff;
+    border-radius: 0.2rem;
+    border: none;
+    outline: none;
+    padding: 0.2rem 0.5rem;
+}
+
+@media (max-width:700px) {
+    .notifi{
+        margin-top: 1.9rem;
+    }
+    
+}

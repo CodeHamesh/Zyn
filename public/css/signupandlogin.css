@@ -1,0 +1,141 @@
+.auth{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginandsignup{
+    width: 18rem;
+    height: fit-content;
+    border: 1px solid #0000002c;
+    border-radius: 1rem;
+    user-select: none;
+    position: relative;
+}
+.forgotpass{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: gray;
+    display: none; 
+}
+.forgotpassdivclose{
+    margin-top: 1rem;
+}
+.forgotpassdivclose i{
+ font-size: 1.5rem;
+ padding: 0.5rem;
+ cursor: pointer;
+ border: 1px solid #fff;
+ border-radius: 50%;
+}
+.forgotpassword{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.forgotpass input{
+    width: 90% ; 
+    padding: .5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: #F5F5F5;
+}
+.forgotpass form h2{
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+}
+.forgotpass button{
+    width: 90%;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+.forgotpass button:hover{
+    background: #000;
+    color: #fff;
+}
+
+.forgotpass form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.center h2{
+    font-size: 1.7rem;
+   font-weight: 500;
+}
+.authinputes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.authinputes input{
+    width: 90%;
+    margin-bottom: 0.5rem;
+    outline: none;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #F5F5F5;
+}
+.authbtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.authbtn button{
+    width: 90%;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+.authbtn button:hover{
+    background: #000;
+    color: #fff;
+}
+.alreadyaccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.alreadyaccount p{
+    font-size: 0.8rem;
+}
+.alreadyaccount a{
+    font-size: 0.8rem;
+    text-decoration: none;
+}

@@ -1,0 +1,415 @@
+.loginuserdiv{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+}
+.homess{
+    width: 100%;
+     height: 100vh;
+     overflow: scroll;
+     scrollbar-width: none;
+     padding-bottom: 2rem;
+}
+
+.loginuserimg{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: url('/img/c.png'),auto;
+}
+.contentuserimg{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.loginuserimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    object-fit: cover;
+}
+.loginusercreatepost{
+    margin-left: 0.5rem;
+    flex-grow: 1;
+}
+.contentuserpost span{
+    font-size: 0.8rem;
+}
+.loginusercreatepost p{
+    font-size: 0.8rem;
+    color: #9D9D9D;
+}
+.postbtn button{
+    background: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    outline: none;
+    color: #000;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.postdiv{
+    width: 100%;
+    height: 100vh;
+    background-color: #EFEFEF;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    user-select: none;
+    z-index: 99;
+}
+.postdivnone{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    cursor: url('/img/c.png'),auto;
+    position: relative;
+}
+.postdivnone .newpost{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+.postdivnone p{
+    font-size: 0.7rem;
+    padding: 0.5rem;
+}
+.postdivnone i{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentuser{
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.postcontent{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contentuserpost{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.contentuserpost textarea {
+    width: 11.5rem;
+    height: 7rem;
+    border: none;
+  outline: none;
+  resize: none;
+  border-bottom: 1px solid #ddd;
+  padding: 0.2rem 0;
+  background: none;
+}
+.contentuserpost textarea{
+    border: none;
+}
+.contentuser img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.postcontentpost{
+    margin-top: 0.5rem;
+}
+.postcontentpost button{
+    cursor: url('/img/c.png'),auto;
+    outline: none;
+    color: #000;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    right: 1rem;
+}
+.allpostsallusers{
+    width: 100%;
+    border-top: 0.001rem solid #0000004a;
+    padding: 0 0.2rem;
+}
+.onepost{
+    width: 100%;
+    height: fit-content;
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.onepostall{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.onepostallusername{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.2rem;
+}
+.onepostallimg{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.onepostallimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.onepostallimgs{
+    width: fit-content;
+    height: fit-content;
+}
+.onepostalltext p {
+    font-size: 1rem;
+}
+.onepotsallbtns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    user-select: none;
+}
+.onepotsallbtns i{
+    font-size: 1.2rem;
+    font-weight: 50;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+.onepostall{
+    margin-top: 1rem;
+}
+.onepostallimgss{
+    max-width: 17rem;
+    max-height: 15rem;
+    overflow: hidden;
+    border-radius: 0.2rem;
+}
+.onepostallimgss img{
+    max-width: 100%;
+      max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* comments css */
+.allcomments{
+    min-width: 30rem;
+    height: 50%; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 1rem;
+    background: #4B4B4B;
+    color: #fff;
+    display: none;
+    overflow: scroll;
+    scrollbar-width: none;
+    }
+    .comment-author{
+        width: 100%;
+        height: fit-content;
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        user-select: none;
+    }
+    .postdivnone{
+        user-select: none;
+    }
+    .postdivnone span{
+        cursor: pointer;
+        font-size: 1.1rem;
+    }
+    .comment-author-img{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .comment-author-username h2{
+      font-size: 1rem;
+    }
+    .comment-author-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.2);
+    }
+    .comment-input{
+        width: 100%;
+        height: fit-content;
+        padding: 0.2rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .comment-input input{
+        max-width: 10rem;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #fff;
+        margin-left: 2.1rem;
+    }
+    .comment-input button{
+        padding: 0.1rem 0.5rem;
+        border: none;
+        outline: none;
+        border-radius: 0.2rem;
+        cursor: pointer !important;
+    }
+    .post-comments{
+        width: 100%;
+        height: fit-content;
+        padding: 0.5rem 1rem;
+    }
+    .postcomment{
+        /* display: flex;
+        justify-content: flex-start;
+        align-items: center; */
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .imgsss{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .postdeletebtn{
+        cursor: pointer;
+        margin-left: 0.8rem;
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+    .ff{
+        font-size: 0.9rem;
+    }
+    .commentcontent{
+        width: 100%;
+        height: fit-content;
+        padding: 0.1rem 2.2rem;
+    }
+    .commentcontent p{
+        font-size: 0.7rem;
+    }
+    .comment-input input::placeholder{
+        color: #ffffffd2;
+    }
+    .postdivnone{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+    .postdivnone .newcomment{
+     flex-grow: 1;
+     display: flex;
+     justify-content: center;align-items: center;
+    }
+
+
+
+@media (max-width:700px) {
+    .allcomments{
+        min-width: 98%;
+        height: 70vh;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 1rem;
+        background: #4B4B4B;
+        color: #fff;
+        display: none;
+        }
+        .imgsss{
+            display: flex !important;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.5rem;
+        }
+}
+/* .imgsss{
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+} */
+.onepostimgs img{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.4rem;
+}
+
+.input3 input {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .input3 label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 0.1rem 0.2rem;
+    background-color: #000;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .input3 label svg {
+    height: 20px;
+    margin-right: 4px;
+    fill: white;
+  }
+
+  .liked{
+    color: #FF0034; 
+}

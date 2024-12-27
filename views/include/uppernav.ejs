@@ -1,0 +1,29 @@
+<div class="uppernav">
+    <div class="logo">
+        <h1>Zyn</h1>
+        </div>
+    <div class="uppernavlinks">
+            <div class="setting">
+            <a href=""><i class="ri-menu-2-fill menuu"></i></a>
+            <div class="dropmenu">
+                <form action="" method="post">
+                    <button>Setting</button>
+                </form>
+                <% if (!isAuthenticated) {%>
+                    <form action="/api/auth/signup" method="get">
+                        <button>Signup</button>
+                    </form>
+                    <form action="/api/auth/login" method="get">
+                        <button>Login</button>
+                    </form>
+                <%} %>
+                <% if (isAuthenticated) {%>
+                    <form action="/api/auth/logout" method="post" class="logoutform">
+                        <button>Logout</button>
+                    </form>
+                <%} %>
+            </div>
+            </div>
+            
+    </div>
+</div>

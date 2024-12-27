@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/boilerplate.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="<%= stylepath %>">
+</head>
+<body>
+    <div id="main">
+        <% if (msg) {%>
+            <div class="notification">
+                <div class="notification__body">
+                    <img
+                        src="/svg/icon.svg"
+                        alt="Success"
+                        class="notification__icon"
+                    >
+                    <p><%= msg %> &#128640</p>
+                </div>
+                <div class="notification__progress"></div>
+            </div>
+        <%} %>
+        <% if (errmsg) {%>
+            <div class="notification">
+                <div class="notification__body">
+                    <img
+                        src="/svg/icon2.svg"
+                        alt="Failure"
+                        class="notification__icon"
+                    >
+                    <p><%= errmsg %></p> &#128543;
+                </div>
+                <div class="notification__progress"></div>
+            </div>
+        <%} %>
+
+        <%- include("./include/uppernav.ejs") %>
+        <%- include('./include/nav.ejs') %>
+        <%- body %>
+    </div>
+    <script src="/js/boilerplate.js"></script>
+</body>
+</html>

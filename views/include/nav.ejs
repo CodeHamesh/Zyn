@@ -1,0 +1,35 @@
+<nav>
+    <div class="logo">
+    <h1>Zyn</h1>
+    </div>
+    <div class="links">
+    <a href="/home"><i class="ri-home-line"></i></a>
+    <a href="/search"><i class="ri-search-line"></i></a>
+    <a href="/activity"><i class="ri-heart-line"></i></a>
+    <a href="/api/auth/profile"><i class="ri-user-line"></i></a>
+    </div>
+    <div class="setting leftnav">
+        
+      <a href=""><i class="ri-menu-2-fill"></i></a>
+      <div class="settinglinks">
+            <div class="linksdrop">
+                <form action="" method="post">
+                    <button>Setting</button>
+                </form>
+                <% if (!isAuthenticated) {%>
+                    <form action="/api/auth/signup" method="get">
+                        <button>Signup</button>
+                    </form>
+                    <form action="/api/auth/login" method="get">
+                        <button>Login</button>
+                    </form>
+                <%} %>
+                <% if (isAuthenticated) {%>
+                    <form action="/api/auth/logout" method="post" class="logoutform">
+                        <button>Logout</button>
+                    </form>
+                <%} %>
+            </div>
+        </div>
+    </div>
+</nav>

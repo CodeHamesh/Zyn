@@ -1,0 +1,125 @@
+<% layout('./boilerplate.ejs') %>
+
+    <body>
+        <div class="mainmiddiv">
+            <div class="profile">
+                <div class="allfriends">
+                    <div class="allfriendsdivclosebtn">
+                        <i class="ri-close-line"></i>
+                    </div>
+                    <div class="allfriendsdivonebyone">
+                        <% findAllfriendsmyfriend.forEach((friend)=>{%>
+                            <a href="/api/auth/friend-profile/<%= friend.fromuserid._id %>">
+                                <div class="onefrienddiv">
+                                    <div class="onefrienddivimg">
+                                        <img src="<%= friend.fromuserid.profilePicture %>" alt="" srcset="">
+                                    </div>
+                                    <div class="onefrienddivname">
+                                        <h3>
+                                            <%= friend.fromuserid.username %>
+                                        </h3>
+                                        <p>
+                                            <%= friend.fromuserid.name %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <%}) %>
+                    </div>
+                </div>
+                <div class="profilecontent">
+                    <div class="usernameandprofilephoto">
+                        <div class="usernameandname">
+                            <h2>
+                                <%= findFriendDeteles.name %>
+                            </h2>
+                            <h3>
+                                <%= findFriendDeteles.username %>
+                            </h3>
+                        </div>
+                        <div class="userprofilephoto">
+                            <img src="<%= findFriendDeteles.profilePicture %>" alt="">
+                        </div>
+                    </div>
+                    <div class="userbio">
+                        <p>
+                            <%= findFriendDeteles.bio %>
+                        </p>
+                    </div>
+                    <div class="userbio linkk">
+                        <a href="<%= findFriendDeteles.link %>" target="_blank">WebSite<i
+                                class="ri-external-link-line"></i></a>
+                    </div>
+                    <div class="friendsandpostcount">
+                        <div class="friends">
+                            <span>
+                                <%= findAllfriendsmyfriendcounts %>
+                            </span><button>friends</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="allposts">
+                    <div class="postaname">
+                        <p>Posts</p>
+                    </div>
+                    <div class="postcontentall">
+                        <div class="postcontentallposts">
+                            <% allposts.forEach((post)=>{%>
+                                <div class="postcontentallpostsname" data-post-id="<%= post._id %>">
+                                    <div class="postcontentusernameimg">
+                                        <div class="postuserimg">
+                                            <img src="<%= post.postuserid.profilePicture %>" alt="" srcset="">
+                                        </div>
+                                        <div class="postcontentallpostsusername">
+                                            <p>
+                                                <%= post.postuserid.username %> <span></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="posttext">
+                                        <p>
+                                            <%= post.postcontent %>
+                                        </p>
+                                    </div>
+                                    <div class="postimgs">
+                                        <img src="<%= post.postimg %>" alt="" srcset="">
+                                    </div>
+                                    <div class="postbtns">
+                                        <div class="postbtnslike">
+                                            <span><i  class="ri-heart-line likes <%= post.likedby.includes(userId) ? 'liked' : '' %> " 
+                                                data-liked="<%= post.likedby.includes(userId) %>"></i></span><span class="mf mflike"><%= post.likes %></span>
+                                        </div>
+                                        <div class="postbtnsdelete"></div>
+                                    </div>
+                                </div>
+                                <% }) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="allcomments">
+                <div class="postdivnone">
+                    <span>Cancel</span>
+                    <p class="newcomment">Comments..</p>
+                    <p><i class="ri-heart-line"></i></p>
+                </div>
+                <div class="comment-author">
+                    
+                </div>
+               <div class="comment-input">
+                <input type="text" placeholder="Add a Comment" class="commentinput" name="comment">
+                <button class="comment-add">Post</button>
+               </div>
+               <div class="post-comments">
+               
+                
+
+
+               </div>
+            </div>
+        </div>
+
+        <script src="/js/profile.js"></script>
+    </body>

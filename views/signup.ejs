@@ -1,0 +1,26 @@
+<% layout("./boilerplate.ejs") %>
+<body>
+    <div class="mainmiddiv">
+    <div class="auth">
+     <div class="loginandsignup">
+        <form action="" method="post">
+          <div class="center">
+            <h2>Signup</h2>
+          </div>
+          <div class="authinputes">
+            <input type="text" placeholder="fullname" name="name" required>
+          <input type="text" placeholder="username" name="username" required>
+          <input type="email" placeholder="email" name="email" required>
+          <input type="password" placeholder="password" name="password" required>
+          </div>
+          <div class="authbtn">
+            <button type="submit">Signup</button>
+          </div>
+          <div class="alreadyaccount">
+            <p>Have an account? <a href="/api/auth/login">Login</a></p>
+          </div>
+        </form>
+     </div>
+    </div>
+    </div>
+</body>

@@ -1,0 +1,41 @@
+<% layout("./boilerplate.ejs") %>
+<body>
+    <div class="mainmiddiv">
+    <div class="auth">
+     <div class="loginandsignup">
+       <div class="forgotpass">
+        <form action="/api/auth/forgotpass" method="post">
+          <div class="forgotpassdivclose">
+            <i class="ri-close-line"></i>
+          </div>
+          <div class="forgotheading">
+            <h2>forgot password</h2>
+          </div>
+          <input type="email" placeholder="Email" name="email">
+          <button type="submit">Send</button>
+        </form>
+       </div>
+        <form action="" method="post">
+          <div class="center">
+            <h2>Login</h2>
+          </div>
+          <div class="authinputes">
+          <input type="text" placeholder="username" name="username" required>
+          <input type="password" placeholder="password" name="password" required autocomplete="current-password">
+          </div>
+          <div class="authbtn">
+            <button type="submit">Login</button>
+          </div>
+          <div class="alreadyaccount">
+             <a href="/api/auth/signup">don't have an account Signup</a>
+          </div>
+        </form>
+        <div class="alreadyaccount">
+          <button type="reset" class="forgotpassword">forgot password</button>
+       </div>
+     </div>
+    </div>
+    </div>
+
+    <script src="/js/loginandsignup.js"></script>
+</body>

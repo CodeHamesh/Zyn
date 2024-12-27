@@ -1,0 +1,32 @@
+<% layout("./boilerplate.ejs") %>
+
+    <body>
+        <div class="mainmiddiv">
+            <div class="notifi">
+                <h3>Notifications</h3>
+            </div>
+            <% allReq.forEach((req)=>{%>
+                <div class="reqs">
+                    <div class="reqdiv">
+                        <div class="imgandusernameandmsg">
+                            <div class="imgdivforreq">
+                                <img src="<%= req.fromuserid.profilePicture %>" alt="">
+                            </div>
+                            <div class="usernameforreq">
+                                <h4><%= req.fromuserid.username %></h4>
+                                <p>req. to friend you</p>
+                            </div>
+                        </div>
+                        <div class="acceptanddeletebtns">
+                            <form action="/activity/connection/req/accept/<%= req._id %>" method="post">
+                                <button type="submit">Confirm</button>
+                            </form>
+                            <form action="/activity/connection/req/delete/<%= req._id %>" method="post">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <%}) %>
+        </div>
+    </body>

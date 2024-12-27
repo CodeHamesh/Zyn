@@ -1,0 +1,97 @@
+.searchheading{
+    width: 100%;
+    padding: 1rem;
+}
+.searchheading h2{
+    font-size: 1.2rem;
+}
+.searchbar{
+    width: 100%;
+    height: fit-content;
+    padding: 0 1rem;
+}
+.searchbar input{
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    outline: none;
+}
+.finduser{
+    width: 100%;
+    height: 75%;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:flex-start;
+    gap: 1rem;
+    scrollbar-width: none;
+}
+.finduser a{
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+.finduserandsendreq{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.imgdiv{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.imgdiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.imgandusernameandname{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+}
+.nameandusername{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.nameandusername h3{
+    font-size: 0.9rem;
+}
+.nameandusername p{
+    font-size: 0.8rem;
+}
+.formsendconnectionreqbtn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.formsendconnectionreqbtn form button{
+    background-color: #262626;
+    color: #fff;
+    border-radius: 0.2rem;
+    border: none;
+    outline: none;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    /* margin-left: 0.5rem; */
+}
+
+@media (max-width:700px) {
+    .searchheading{
+        margin-top: 1.9rem;
+    }
+    
+}
