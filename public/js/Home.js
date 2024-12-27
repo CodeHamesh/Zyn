@@ -2,7 +2,7 @@ let el = document.querySelector(".loginuserdiv");
 let postdiv = document.querySelector(".loginusercreatepost");
 let postDiv = document.querySelector(".postbtn button");
 let uppernav = document.querySelector(".uppernav");
-let postdivnone = document.querySelector(".postdivnone span");
+let postdivnone = document.querySelector(".postdivnone .clear");
 let posdivnoneandblock = document.querySelector(".postdiv");
 let onepostallimgss = document.querySelectorAll(".onepostallimgss img");
 let onepostallimgs = document.querySelector(".onepostallimgs");
@@ -223,7 +223,7 @@ el.addEventListener("click", (e) => {
   if (e.target.closest(".loginusercreatepost")) {
     posdivnoneandblock.style.display = "block";
     uppernav.style.visibility = "hidden";
-  } else if (e.target.closest(".postbtn button")) {
+  } else if (e.target.closest(".postbtn .bbtn")) {
     posdivnoneandblock.style.display = "block";
     uppernav.style.visibility = "hidden";
   }
