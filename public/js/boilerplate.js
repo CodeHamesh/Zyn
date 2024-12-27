@@ -4,9 +4,9 @@ let dropmenu = document.querySelector(".dropmenu ");
 let dropmenuBtn = document.querySelector(".uppernavlinks .menuu");
 
 
-// document.addEventListener("contextmenu",(e)=>{
-//     e.preventDefault()
-// })
+document.addEventListener("contextmenu",(e)=>{
+    e.preventDefault()
+})
 document.addEventListener("keydown", function (event) {
     if (event.ctrlKey && event.shiftKey && event.code === "KeyI") {
       event.preventDefault();
