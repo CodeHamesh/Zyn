@@ -37,7 +37,7 @@ let upload = multer({
 homeRouter.get("/",Auth,async(req,res,next)=>{
 try {
     let userId = req.userInfo.userId
-    res.render("home.ejs",{title:"Zyn.Home",stylepath:'/css/home.css',userId})
+    return  res.render("home.ejs",{title:"Zyn.Home",stylepath:'/css/home.css',userId})
 } catch (err) {
     next(err)
 }
