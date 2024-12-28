@@ -440,7 +440,7 @@ scrollbar-width: none;
 }
 .postimgs{
     width: 15rem;
-    max-height: 9rem;
+    max-height: 23rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
