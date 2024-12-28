@@ -6,11 +6,19 @@ const { logoute } = require('../controller/userlogoute');
 const {sendForgotPassLink, resetPass, renderForgotPassTemplate} = require("../controller/forgotPass");
 const { Auth } = require('../middlewares/auth');
 const multer = require('multer');
-const joi = require('joi');
+const cloudinary = require('cloudinary').v2
 const { updateProfile } = require('../controller/profileUpdateHen');
 const { userProfileRender, friendProfileRender } = require('../controller/profileAndFriProfile');
 const Post = require('../models/post');
 const Comment = require('../models/comments')
+
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+  api_key: process.env.CLOUDINARY_API_KEY,     
+  api_secret: process.env.CLOUDINARY_API_SECRET
+})
+
+
 
 let storage = multer.diskStorage({
     destination:(req,file,cb)=>{

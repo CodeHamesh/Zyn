@@ -1,12 +1,19 @@
 const { Auth } = require('../middlewares/auth')
 const Post = require('../models/post');
+require('dotenv').config()
 const express = require('express')
 const multer = require('multer');
 const Comment = require('../models/comments');
 const homeRouter = require('express').Router()
-
+const cloudinary = require('cloudinary').v2
 const bodyParser = require('body-parser');  // For parsing JSON body
 homeRouter.use(bodyParser.json());
+
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+  api_key: process.env.CLOUDINARY_API_KEY,     
+  api_secret: process.env.CLOUDINARY_API_SECRET
+})
 
 
 let storage = multer.diskStorage({
@@ -70,7 +77,21 @@ homeRouter.post("/post",Auth,upload.single('postimg'),async(req,res,next)=>{
     }
     let postObj = {postuserid,postcontent}
     if (req.file) {
-        postObj.postimg = `/uploads/${req.file.filename}`
+        // postObj.postimg = `/uploads/${req.file.filename}`
+
+        const result = await cloudinary.uploader.upload_stream(
+            { folder: "post_images" }, 
+            (error, result) => {
+                if (error) {
+                    console.error("Cloudinary upload error:", error);
+                    return res
+                        .cookie("flasherr", "Image upload failed!")
+                        .redirect("/home");
+                }
+                postObj.postimg = result.secure_url; 
+            }
+        );
+        result.end(req.file.buffer);
     }
     let createPost = new Post(postObj)
     await createPost.save()

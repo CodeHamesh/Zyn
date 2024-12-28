@@ -14,7 +14,6 @@ app.engine('ejs',ejsMate)
 app.use(cookieParser())
 app.use(express.json())
 const methodOverrride = require('method-override');
-
 const authRouter = require('./routers/authRouter.js');
 const searchRouter = require('./routers/searchRouter.js');
 const activityRouter = require('./routers/activityRouter.js');
