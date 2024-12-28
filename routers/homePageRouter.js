@@ -80,20 +80,35 @@ homeRouter.post("/post",Auth,upload.single('postimg'),async(req,res,next)=>{
     let postObj = {postuserid,postcontent}
     if (req.file) {
         // postObj.postimg = `/uploads/${req.file.filename}`
-
-        const result = await cloudinary.uploader.upload_stream(
-            { folder: "post_images" }, 
-            (error, result) => {
-                if (error) {
-                    console.error("Cloudinary upload error:", error);
-                    return res
-                        .cookie("flasherr", "Image upload failed!")
-                        .redirect("/home");
+        // const result = await cloudinary.uploader.upload_stream(
+        //     { folder: "post_images" }, 
+        //     (error, result) => {
+        //         if (error) {
+        //             console.error("Cloudinary upload error:", error);
+        //             return res
+        //                 .cookie("flasherr", "Image upload failed!")
+        //                 .redirect("/home");
+        //         }
+        //         postObj.postimg = result.secure_url; 
+        //     }
+        // );
+        // result.end(req.file.buffer);
+        const uploadResult = await new Promise((resolve, reject) => {
+            const uploadStream = cloudinary.uploader.upload_stream(
+                { folder: "post_images" }, 
+                (error, result) => {
+                    if (error) {
+                        return reject(error); 
+                    }
+                    resolve(result); 
                 }
-                postObj.postimg = result.secure_url; 
-            }
-        );
-        result.end(req.file.buffer);
+            );
+            uploadStream.end(req.file.buffer); 
+        });
+
+        postObj.postimg = uploadResult.secure_url;
+
+
     }
     let createPost = new Post(postObj)
     await createPost.save()
