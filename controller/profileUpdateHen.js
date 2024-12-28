@@ -21,7 +21,6 @@ async function updateProfile(req,res,next){
                 );
                 uploadStream.end(req.file.buffer); 
             });
-
             updateData.profilePicture = result.secure_url;
         }
         await User.findByIdAndUpdate(userId,updateData)

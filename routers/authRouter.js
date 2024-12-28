@@ -15,21 +15,23 @@ const Post = require('../models/post');
 const Comment = require('../models/comments')
 
 cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
   api_key: process.env.CLOUDINARY_API_KEY,     
   api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
 
 
-let storage = multer.diskStorage({
-    destination:(req,file,cb)=>{
-      cb(null,'./uploads')
-    },
-    filename:(req,file,cb)=>{
-        cb(null, Date.now() + Math.floor(Math.random()* 5)+ file.originalname)
-    }
-})
+// let storage = multer.diskStorage({
+//     destination:(req,file,cb)=>{
+//       cb(null,'./uploads')
+//     },
+//     filename:(req,file,cb)=>{
+//         cb(null, Date.now() + Math.floor(Math.random()* 5)+ file.originalname)
+//     }
+// })
+
+let storage = multer.memoryStorage();
 
 let upload = multer({
     storage,

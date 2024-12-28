@@ -16,14 +16,16 @@ cloudinary.config({
 })
 
 
-let storage = multer.diskStorage({
-    destination:(req,file,cb)=>{
-      cb(null,'./uploads')
-    },
-    filename:(req,file,cb)=>{
-        cb(null, Date.now() + Math.floor(Math.random()* 5)+ file.originalname)
-    }
-})
+// let storage = multer.diskStorage({
+//     destination:(req,file,cb)=>{
+//       cb(null,'./uploads')
+//     },
+//     filename:(req,file,cb)=>{
+//         cb(null, Date.now() + Math.floor(Math.random()* 5)+ file.originalname)
+//     }
+// })
+
+let storage = multer.memoryStorage();
 
 let upload = multer({
     storage,
