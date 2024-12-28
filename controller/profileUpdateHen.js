@@ -1,6 +1,7 @@
 const User = require('../models/User');
 const cloudinary = require('cloudinary').v2
-const cloudinary = require('cloudinary')
+// const cloudinary = require('cloudinary')
+
 async function updateProfile(req,res,next){
     try {
         let {userId} = req.params;

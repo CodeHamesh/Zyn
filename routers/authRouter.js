@@ -7,7 +7,7 @@ const {sendForgotPassLink, resetPass, renderForgotPassTemplate} = require("../co
 const { Auth } = require('../middlewares/auth');
 const multer = require('multer');
 const cloudinary = require('cloudinary').v2
-const cloudinary = require('cloudinary')
+
 
 const { updateProfile } = require('../controller/profileUpdateHen');
 const { userProfileRender, friendProfileRender } = require('../controller/profileAndFriProfile');
